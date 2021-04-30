@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сериал Ведьмак</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <img src="img/logo.png" alt="Logo">
+                <nav class="menu-list">
+                    <a href="#" class="menu-link">Описание</a>
+                    <a href="#" class="menu-link">Трейлер</a>
+                    <a href="#" class="menu-link">Отзывы</a>
+                </nav>
+                <div class="social">
+                    <a href="#" class="social-links twitter"></a>
+                    <a href="#" class="social-links instagram"></a>
+                    <a href="#" class="social-links facebook"></a>
+                </div>
+            </div>
+            <!-- /.header -->
+        </div>
+        <div class="gamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <div class="content">
+                    <span class="genre">
+                        2019, фэнтези
+                    </span>
+                    <div class="rating">
+                        <div class="rating-stars">
+                            <span class="star full-stars"></span>
+                            <span class="star full-stars"></span>
+                            <span class="star full-stars"></span>
+                            <span class="star full-stars"></span>
+                            <span class="star full-stars"></span>
+                            <span class="star full-stars"></span>
+                            <span class="star full-stars"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                        </div>
+                        <div class="rating-numb">
+                            7/10
+                        </div>
+                    </div>
+                    <h1>Ведьмак</h1>
+                    <p class="main-description">
+                        Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по кличке Плотва  путешествует по Континенту. За тугой мешочек чеканных монет этот мужчина избавит вас от  всякой настырной нечисти — хоть от чудищ болотных, оборотней и даже заколдованныхпринцесс. 
+                    </p>
+                    <input type="button" class="main-btn" value="Смотреть онлайн">
+                </div>
+                <button class="play">
+                    <img src="/img/play.svg" class="play-img" alt="play">
+                </button>
+            </div>
+
+            <div class="series">
+                <!-- Slider main container -->
+                <div class="swiper-container" style="margin-left: 0;">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="cart s s-1">
+                                <span class="series-numb">Серия #1</span>
+                                <span class="series-title">Начало конца</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cart s s-2">
+                                <span class="series-numb">Серия #2</span>
+                                <span class="series-title">Четыре знака</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cart s s-2">
+                                <span class="series-numb">Серия #2</span>
+                                <span class="series-title">Четыре знака</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="button" class="arrow">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <span class="copy">© 2020 The Witcher. All right reserved.</span>
+                <div class="footer-nav">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Legal</a>
+                </div>
+            </div>
+        </div>        
+    </footer>
+    <div class="overlay hide"></div>
+    <div class="modal-video hide">
+        <div class="close">&times;</div>
+            <video src="" class='video-player' id='video-player' preload='metadata'></video>
+            
+            <div class='video-hud__element video-hud__action video-hud__action_play' id='video-hud__action'>
+
+            </div>
+            <div class='video-hud'>
+                <div class="panel-progress">
+                    <progress value='0' max='100' class='video-hud__element video-hud__progress-bar' id='video-hud__progress-bar'>
+    
+                    </progress>
+                </div>
+                <div class="btn-pannel">
+
+                    <div class="left">
+                        <div class="btn-next"></div>
+
+                    
+                        <div class="volume">
+                            <div class='video-hud__mute video-hud__mute_false' id='video-hud__mute'> </div>
+                            <input type='range' value='100' max='100' title='Громкость' class='video-hud__element   video-hud__volume' name="vol" id='video-hud__volume'>
+                        </div>
+
+                        <div class="times">
+                            <span class='video-hud__element video-hud__curr-time' id='video-hud__curr-time'>
+                                00:00
+                            </span>
+                            <span>/</span>
+                            <span class='video-hud__element video-hud__duration' id='video-hud__duration'>
+                                00:00
+                            </span>
+                        </div>  
+                    </div> 
+                    <div class="right">
+                        <div class="full"></div>
+                    </div>                             
+                </div>
+            </div>
+    </div>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
