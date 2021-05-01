@@ -144,7 +144,7 @@ function play() {
   overlay.classList.remove('hide');
   videoDiv.src = '/accets/video/witch.mp4';
   videoDiv.autoplay = 'autoplay';
-
+  
   document.addEventListener('keydown', keyHandler);
 }
 
@@ -155,6 +155,7 @@ function watch(series, n) {
 
   modal.classList.remove('hide');
   overlay.classList.remove('hide');
+  
   videoDiv.src = series;
   videoDiv.autoplay = 'autoplay';
 
@@ -167,7 +168,7 @@ const currentSeries = e => {
     const target = t.className.split(' ').reverse()[0];
     const n = target.split('').reverse()[0] - 1;
     const numSer = _all[Object.keys(_all).find(seria => seria.toLocaleLowerCase() === target)];
-
+    
     watch(numSer, n);
   }
 };
