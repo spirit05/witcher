@@ -1,4 +1,5 @@
 const $ = a => document.querySelector(a);
+const cartSlider = $('.swiper-wrapper');
 const videoPlayer = $('#video-player');
 const bar = $('#video-hud__progress-bar');
 const progressBar = $('#video-hud__progress-bar');
@@ -19,16 +20,92 @@ const header = $('.header');
 const left = $('.left');
 let playerType = '';
 
-const _all = [
-  'S01E01',
-  'S01E02',
-  'S01E03',
-  'S01E04',
-  'S01E05',
-  'S01E06',
-  'S01E07',
-  'S01E08'
+const cards = [
+  {
+      cart: "cart s s01e01",
+      count: "Серия #1",
+      name: "Начало конца",
+      bg: "background-image: url(../accets/img/cart/s1-s1.png);",
+      img: "url(../accets/img/cart/s1-s1.png)"
+  },
+  {
+      cart: "cart s s01e02",
+      count: "Серия #2",
+      name: "Четыре марки",
+      bg: "background-image: url(../accets/img/cart/s1-s2.png);",
+      img: "url(../accets/img/cart/s1-s2.png)"
+  },
+  {
+      cart: "cart s s01e03",
+      count: "Серия #3",
+    name: "Предательская луна",
+      bg: "background-image: url(../accets/img/cart/s1-s3.png);",
+      img: "url(../accets/img/cart/s1-s3.png)"
+  },
+  {
+      cart: "cart s s01e04",
+      count: "Серия #4",
+      name: "Банкеты, ублюдки и похороны",
+      bg: "background-image: url(../accets/img/cart/s1-s4.png);",
+      img: "url(../accets/img/cart/s1-s4.png)"
+  },
+  {
+      cart: "cart s s01e05",
+      count: "Серия #5",
+      name: "Желания из бутылки",
+      bg: "background-image: url(../accets/img/cart/s1-s5.png);",
+      img: "url(../accets/img/cart/s1-s5.png)"
+  },
+  {
+      cart: "cart s s01e06",
+      count: "Серия #6",
+      name: "Редкие виды",
+      bg: "background-image: url(../accets/img/cart/s1-s6.png);",
+      img: "url(../accets/img/cart/s1-s6.png)"
+  },
+  {
+      cart: "cart s s01e07",
+      count: "Серия #7",
+      name: "Перед падением",
+      bg: "background-image: url(../accets/img/cart/s1-s7.png);",
+      img: "url(../accets/img/cart/s1-s7.png)"
+  },
+  {
+      cart: "cart s s01e08",
+      count: "Серия #8",
+      name: "Нечто большее",
+      bg: "background-image: url(../accets/img/cart/s1-s8.png);",
+      img: "url(../accets/img/cart/s1-s8.png)"
+  }
 ];
+
+const _all = {
+  S01E01: 'https://satsys.ucoz.ru/series/S01E01.mp4',
+  S01E02: 'https://satsys.ucoz.ru/series/S01E02.mp4',
+  S01E03: 'https://satsys.ucoz.ru/series/S01E03.mp4',
+  S01E04: 'https://satsys.ucoz.ru/series/S01E04.mp4',
+  S01E05: 'https://satsys.ucoz.ru/series/S01E05.mp4',
+  S01E06: 'https://satsys.ucoz.ru/series/S01E06.mp4',
+  S01E07: 'https://satsys.ucoz.ru/series/S01E07.mp4',
+  S01E08: 'https://satsys.ucoz.ru/series/S01E08.mp4',
+};
+
+const slides = cards.reduce((html, seria) => {
+  html += `
+    <div class="swiper-slide">
+      <div class="${seria.cart}" style="${seria.bg}">
+          <span class="series-numb">${seria.count}</span>
+          <span class="series-title">${seria.name}</span>
+      </div>
+    </div>
+  `; 
+
+
+
+  return html;
+}, '');
+
+cartSlider.insertAdjacentHTML('afterbegin', slides);
 
 const mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
@@ -67,7 +144,7 @@ function play() {
   overlay.classList.remove('hide');
   videoDiv.src = '/accets/video/witch.mp4';
   videoDiv.autoplay = 'autoplay';
-
+  
   document.addEventListener('keydown', keyHandler);
 }
 
@@ -78,7 +155,8 @@ function watch(series, n) {
 
   modal.classList.remove('hide');
   overlay.classList.remove('hide');
-  videoDiv.src = `/accets/video/${series}.mp4`;
+  
+  videoDiv.src = series;
   videoDiv.autoplay = 'autoplay';
 
   document.addEventListener('keydown', keyHandler);
@@ -89,8 +167,8 @@ const currentSeries = e => {
   if (t) {
     const target = t.className.split(' ').reverse()[0];
     const n = target.split('').reverse()[0] - 1;
-    const numSer = _all.find(seria => seria.toLocaleLowerCase() === target);
-
+    const numSer = _all[Object.keys(_all).find(seria => seria.toLocaleLowerCase() === target)];
+    
     watch(numSer, n);
   }
 };
@@ -128,13 +206,14 @@ function prevBtn(n) {
 }
 
 function nextSeries(n) {
-  const len = _all.length;
+  const allVid = Object.keys(_all);
+  const len = allVid.length;
   const s = /([a-z]\d{2}){2}/gi;
   const currentVideo = $('video').src.match(s)[0];
-  const index = _all.findIndex(url => url === currentVideo) + n;
+  const index = allVid.findIndex(url => url === currentVideo) + n;
   const nextVideo = index < len && index > 0 ? index : 0;
 
-  watch(_all[nextVideo], nextVideo);
+  watch(Object.values(_all)[nextVideo], nextVideo);
 }
 
 function videoAct(e) { //Запускаем или ставим на паузу

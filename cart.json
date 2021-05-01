@@ -1,0 +1,58 @@
+ {
+    "series 1": {
+        "cart": "cart s s01e01",
+        "count": "Серия #1",
+        "name": "Начало конца",
+        "bg": "background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s1.png);",
+        "img": "url(../accets/img/cart/s1-s1.png)"
+    },
+    "series 2": {
+        "cart": "cart s s01e02",
+        "count": "Серия #2",
+        "name": "Четыре марки",
+        "bg": "background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s2.png);",
+        "img": "url(../accets/img/cart/s1-s2.png)"
+    },
+    "series 3": {
+        "cart": "cart s s01e03",
+        "count": "Серия #3",
+        "name": "Предательская луна",
+        "bg": "background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s3.png);",
+        "img": "url(../accets/img/cart/s1-s3.png)"
+    },
+    "series 4": {
+        "cart": "cart s s01e04",
+        "count": "Серия #4",
+        "name": "Банкеты, ублюдки и похороны",
+        "bg": "background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s4.png);",
+        "img": "url(../accets/img/cart/s1-s4.png)"
+    },
+    "series 5": {
+        "cart": "cart s s01e05",
+        "count": "Серия #5",
+        "name": "Желания из бутылки",
+        "bg": "background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s5.png);",
+        "img": "url(../accets/img/cart/s1-s5.png)"
+    },
+    "series 6": {
+        "cart": "cart s s01e06",
+        "count": "Серия #6",
+        "name": "Редкие виды",
+        "bg": "background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s6.png);",
+        "img": "url(../accets/img/cart/s1-s6.png)"
+    },
+    "series 7": {
+        "cart": "cart s s01e07",
+        "count": "Серия #7",
+        "name": "Перед падением",
+        "bg": "background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s7.png);",
+        "img": "url(../accets/img/cart/s1-s7.png)"
+    },
+    "series 8": {
+        "cart": "cart s s01e08",
+        "count": "Серия #8",
+        "name": "Нечто большее",
+        "bg": "background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s8.png);",
+        "img": "url(../accets/img/cart/s1-s8.png)"
+    }
+}
