@@ -16,8 +16,8 @@
 
 @font-face {
     font-family: 'Mason Chronicles';
-    src: url('../Fonts/Mason\ Chronicles\ Regular.woff') format('woff'),
-        url('../Fonts/Mason\ Chronicles\ Regular.woff2') format('woff2');
+    src: url('../Fonts/MasonChronicles.woff') format('woff'),
+        url('../Fonts/Mason-Chronicles-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -35,7 +35,7 @@
 
 body {
     background-color: #141218;
-    background-image: url(../img/background\ \(1\).png);
+    background-image: url(../accets/img/background\ \(1\).png);
     background-repeat: no-repeat;
     background-position: top right;
     font-family: 'Roboto', san-serif;
@@ -110,17 +110,17 @@ h1 {
 }
 
 .twitter {
-    background-image: url(../img/social.svg);
+    background-image: url(../accets/img/social.svg);
     background-position: 0 0;
 }
 
 .instagram {
-    background-image: url(../img/social.svg);
+    background-image: url(../accets/img/social.svg);
     background-position: -38px 0;
 }
 
 .facebook {
-    background-image: url(../img/social.svg);
+    background-image: url(../accets/img/social.svg);
     background-position: -76px 0;
 }
 
@@ -155,14 +155,14 @@ h1 {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-image: url(../img/star.svg);
+    background-image: url(../accets/img/star.svg);
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
 .full-stars {
-    background-image: url(../img/full-star.svg);
+    background-image: url(../accets/img/full-star.svg);
 }
 
 .rating-numb {
@@ -241,12 +241,12 @@ h1 {
     /* margin-right: 30px; */
 }
 
-.s-1 {
-    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../img/cart/s1-s1.png);
+.s01e01 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s1.png);
 }
 
-.s-2 {
-    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../img/cart/s1-s2.png);
+.s01e02 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url(../accets/img/cart/s1-s2.png);
 }
 
 .s {
@@ -271,7 +271,7 @@ h1 {
     position: absolute;
     width: 32px;
     height: 23px;
-    background-image: url(../img/cart/arrow.svg);
+    background-image: url(../accets/img/cart/arrow.svg);
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -365,12 +365,21 @@ video {
 .btn-next {
     width: 25px;
     height: 25px;
-    background-image: url(../img/next.svg);
+    background-image: url(../accets/img/next.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     margin-left: 15px;
-    margin-right: 10px;
+}
+.btn-prev {
+    width: 25px;
+    height: 25px;
+    background-image: url(../accets/img/next.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 15px;
+    transform: rotate(180deg)
 }
 .times {
     margin-left: 15px;
@@ -405,7 +414,7 @@ video {
 .video-hud__action_pause {
     width: 50px;
     height: 50px;
-    background-image: url(../img/play.svg);
+    background-image: url(../accets/img/play.svg);
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: calc(50% + 2px) center;
@@ -414,7 +423,7 @@ video {
 .video-hud__action_play {
     width: 50px;
     height: 50px;
-    background-image: url(../img/pause.svg);
+    background-image: url(../accets/img/pause.svg);
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: calc(50% - 1px) center;
@@ -425,6 +434,7 @@ video {
     height: 25px;
     overflow: hidden;
     transition: all 0.5s ease-out;
+    margin-left: 15px;
 }
 
 .volume:hover {
@@ -442,11 +452,11 @@ video {
 }
 
 .video-hud__mute_true {
-    background-image: url(../img/mute.svg);
+    background-image: url(../accets/img/mute.svg);
 }
 
 .video-hud__mute_false {
-    background-image: url(../img/sound.svg);
+    background-image: url(../accets/img/sound.svg);
 }
 
 .video-hud__volume {
@@ -456,7 +466,7 @@ video {
 .full {
     width: 20px;
     height: 20px;
-    background-image: url(../img/full.svg);
+    background-image: url(../accets/img/full.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
