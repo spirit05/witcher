@@ -80,7 +80,7 @@ const cards = [
 ];
 
 const _all = {
-  S01E01: 'https://satsys.ucoz.ru/series/S01E01.mp4',
+  S01E01: 'https://cloud.mail.ru/home/video/%D0%B2%D0%B5%D0%B4%D1%8C%D0%BC%D0%B0%D0%BA/1%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD/S01E01.mp4',
   S01E02: 'https://satsys.ucoz.ru/series/S01E02.mp4',
   S01E03: 'https://satsys.ucoz.ru/series/S01E03.mp4',
   S01E04: 'https://satsys.ucoz.ru/series/S01E04.mp4',
@@ -132,6 +132,9 @@ const closeModal = () => {
   modal.classList.add('hide');
   overlay.classList.add('hide');
   videoDiv.src = '';
+  if (document.querySelector('.frame')) {
+    document.querySelector('.frame').remove();
+  }
 };
 
 function play() {
@@ -149,17 +152,24 @@ function play() {
 }
 
 function watch(series, n) {
-  playerType = 'watch';
+  // playerType = 'watch';
   
-  setBtn(n);
+  // setBtn(n);
+
+  let video = `<div class="frame">
+  <iframe src="https://player-smotri.mail.ru/?viewMode=external&amp;brandsafety=1&amp;autoplay=0&amp;tags=1193&amp;manifestUrl=https%3A%2F%2Fcloclo51.cloud.mail.ru%2Fvideo%2F0p%2FL3ZpZGVvLyVEMCVCMiVEMCVCNSVEMCVCNCVEMSU4QyVEMCVCQyVEMCVCMCVEMCVCQS8xJTIwJUQxJTgxJUQwJUI1JUQwJUI3JUQwJUJFJUQwJUJEL1MwMUUwMS5tcDQ%3D.m3u8%3Fdouble_encode%3D1&amp;pictureUrl=https%3A%2F%2Fthumb.cloud.mail.ru%2Fthumb%2Fvxw0%2Fvideo%2F%25D0%25B2%25D0%25B5%25D0%25B4%25D1%258C%25D0%25BC%25D0%25B0%25D0%25BA%2F1%2520%25D1%2581%25D0%25B5%25D0%25B7%25D0%25BE%25D0%25BD%2FS01E01.mp4&amp;initLow=0" allowfullscreen="" allow="autoplay; fullscreen"></iframe></div>`
 
   modal.classList.remove('hide');
   overlay.classList.remove('hide');
-  
-  videoDiv.src = series;
-  videoDiv.autoplay = 'autoplay';
+  document.querySelector('.video-wrapper').classList.add('hide');
 
-  document.addEventListener('keydown', keyHandler);
+  modal.insertAdjacentHTML('beforeend', video);
+  console.log('insert', video);
+  console.log(modal);
+
+  // videoDiv.autoplay = 'autoplay';
+
+  // document.addEventListener('keydown', keyHandler);
 }
 
 const currentSeries = e => {

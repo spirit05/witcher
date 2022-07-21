@@ -296,6 +296,7 @@ h1 {
 .modal-video {
     position: fixed;
     width: 60vw;
+    min-height: 40vh;
     top: 15%;
     left: calc(50% - 30vw);
     z-index: 998;
@@ -476,7 +477,14 @@ video {
     display: none;
 }
 
+.frame {
+    width: 100%;
+}
 
+.frame iframe {
+    display: inline-block;
+    max-width: 100%;
+}
 
 @media(max-width: 760px) {
     .play {
@@ -619,3 +627,4 @@ video {
         right: 20%;
     }
 }
+
